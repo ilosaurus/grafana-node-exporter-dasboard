@@ -221,7 +221,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "(wmi_os_physical_memory_free_bytes{instance=~\"$host\"} / wmi_cs_physical_memory_bytes{instance=~\"$host\"}) > 0",
+          "expr": "(1-wmi_os_physical_memory_free_bytes{instance=~\"$host\"} / wmi_cs_physical_memory_bytes{instance=~\"$host\"}) > 0",
           "format": "time_series",
           "instant": false,
           "interval": "",
